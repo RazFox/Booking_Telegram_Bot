@@ -1,0 +1,7 @@
+/.env
+/.idea
+/venv
+/User.db
+/History.db
+/User.db-shm
+/User.db-wal
