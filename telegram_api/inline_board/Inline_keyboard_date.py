@@ -22,7 +22,7 @@ class Inline_board_date():
             start_day = date.day
         else:
             start_day = 1
-        if mount in [1, 3, 5, 6, 8, 10, 12]:
+        if mount in [1, 3, 5, 8, 10, 12]:
             range_day_end = 32
         elif mount == 2:
             # Проверка на високосный год при выборе февраля.
