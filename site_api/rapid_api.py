@@ -141,8 +141,8 @@ class Rapid_api:
             day = 1 # Временная переменная
             hotel = {"id": hotel_info["id"],
                      "name": hotel_info["name"],
-                     "price_night": price,
-                     "price_total": price * user_rental_day,
+                     "price_night": f"{round(price, 2)}$",
+                     "price_total": f"{round(price * user_rental_day, 2)}$",
                      "rental_count": user_rental_day,
                      "reviews": {"score": hotel_info["reviews"]["score"], "total": hotel_info["reviews"]["total"]},
                      "description": "Hot springs Tokyo hotel with restaurant, connected to a shopping centre ",
