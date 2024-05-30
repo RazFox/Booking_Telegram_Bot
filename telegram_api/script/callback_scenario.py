@@ -23,7 +23,6 @@ def answer(call):
     keyboard_inline, text_message = start_inline.error_menu()
     user_id = call.from_user.id
     answer_call = call.data.split('_')[0]
-    print(user_id, answer_call)
     if answer_call == 'search-hotel':
         # Запуск сценария поиска отеля. Вызов функции для ввода города.
         keyboard_inline, text_message = city_input(user_id)

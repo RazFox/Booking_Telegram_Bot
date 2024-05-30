@@ -5,5 +5,7 @@
 /History.db
 /User.db-shm
 /User.db-wal
+/History.db-shm
+/History.db-wal
 /exception_control
 /logging_loc

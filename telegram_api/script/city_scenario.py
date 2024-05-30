@@ -37,18 +37,15 @@ def search_city(message) -> [InlineKeyboardMarkup, str]:
         pass
     else:
         cities = dict()
-        print(data_hotels)
         for elements in data_hotels["sr"]:
             if elements["type"] == "CITY":
                 name = "{}, {}".format(elements["regionNames"]["shortName"],
                                        elements["regionNames"]["secondaryDisplayName"])
                 id = elements["essId"]["sourceId"]
-                print(name, id)
                 text_name = "{}+{}".format(name, id)
                 cities.update({name: id})
             else:
                 pass
-        print(cities)
         city_board = inline_keyboard.generator_inline_keyboard(text_data=cities, count_column=2, data_code="city")
         keyboard_city = inline_keyboard.edit_inline(inline_keyboard=city_board,
                                                     callback="search-hotel", text="Enter the city again")
